@@ -45,8 +45,6 @@ public class Q1Ex1 {
         System.out.println("Age: " + age3);
         System.out.println("Hobby: " + hobby3 + "\n");
         
-        //three operations umm
-        
         
         System.out.print("Johan is the oldest: ");
         System.out.println(age2>age1&&age2>age3);
