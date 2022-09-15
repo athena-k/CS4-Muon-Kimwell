@@ -54,6 +54,11 @@ public class Q1Ex2 {
                     System.out.println("Thanks for playing!");
                     break;
                 }
+                else if(playAgain.equalsIgnoreCase("yes")){
+                }
+                else {
+                    System.out.println("Invalid input. Back to default screen.");
+                }
         }
         else if (choice.equalsIgnoreCase("Change settings")){
             System.out.println("What is the lower limit of the randomizer (default is 1)?");
@@ -66,6 +71,9 @@ public class Q1Ex2 {
         else if (choice.equalsIgnoreCase("End application")){
             System.out.println("Thanks for playing!");
             break;
+        }
+        else {
+            System.out.println("Invalid input. Back to default screen.");
         }
         
         }while("false".equals(end));
