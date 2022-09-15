@@ -1,20 +1,25 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Q1Ex2;
+
 import java.util.Scanner;
+
 /**
  *
- * @author Athena Kimwell
+ * @author MUON
  */
 public class Q1Ex2 {
+    
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         String end = "false";
         
         int guesses = 3;
@@ -31,15 +36,15 @@ public class Q1Ex2 {
         String choice = sc.nextLine();
         if(choice.equalsIgnoreCase("Start game")){
             int random = (int) Math.floor(Math.random()*y) + x;
-            while(guesses != 0){
+            for(int counter=guesses; counter>=1; counter--){
                 System.out.println("You have " + guesses + " guess(es) left. Guess a number between " + x + " and " + y);
-                guesses--;
                 String guess = sc.nextLine();
                 int guess1 = Integer.parseInt(guess);
                 if(guess1 == random){
                     System.out.println("Congrats, you win!");
                     break;
                 }
+                
                 else if(guess1 > random){
                     System.out.print("Guess lower! ");
                 }
@@ -54,8 +59,10 @@ public class Q1Ex2 {
                     System.out.println("Thanks for playing!");
                     break;
                 }
+                
                 else if(playAgain.equalsIgnoreCase("yes")){
                 }
+                
                 else {
                     System.out.println("Invalid input. Back to default screen.");
                 }
@@ -70,13 +77,14 @@ public class Q1Ex2 {
         }
         else if (choice.equalsIgnoreCase("End application")){
             System.out.println("Thanks for playing!");
-            break;
-        }
-        else {
-            System.out.println("Invalid input. Back to default screen.");
+            break;  
         }
         
-        }while("false".equals(end));
-    }
+        else {
+            System.out.println("Invalid input. Back to default screen.");
+        }        
+        }while("false".equalsIgnoreCase(end));
+    } 
+        
     
 }
