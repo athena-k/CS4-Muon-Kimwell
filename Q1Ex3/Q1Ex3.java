@@ -18,18 +18,17 @@ public class Q1Ex3 {
         Sibling a = new Sibling("Athena", 15, "reading");
         Sibling b = new Sibling("Aldrich", 13, "gaming");
         Sibling c = new Sibling("Aldrei", 6, "playing with the pet dogs");
+        //3 instances of my Sibling class
         
         Song d = new Song("Lunod", "Ben&Ben");
         Song e = new Song("The Man", "Taylor Swift");
+        //2 instances of Song class
         
-        Singer t = new Singer();
-        t.performForAudience(12);
-        System.out.println(t.noOfPerformances);
-        System.out.println(t.earnings);
-        Singer s = new Singer();
-        /*s.performForAudience(13);
-        System.out.println(s.noOfPerformances);
-        System.out.println(s.earnings);*/
+        Singer f = new Singer("Athena", 0, 0, d);
+        System.out.print(f.name + " is our performer. They have done " + f.noOfPerformances + " performances. ");
+        System.out.println("They have a total of " + f.earnings + " in earnings and their favorite song is " + f.favSong.title + " by " + f.favSong.artist + ".");
+        f.performForAudience(12);
+        f.changeFavSong(e);
     }
     
 }

@@ -9,17 +9,26 @@ package Q1Ex3;
  * @author Athena Kimwell
  */
 public class Singer {
-    public static String name;
-    public static int noOfPerformances;
-    public static double earnings;
-    //favorite song how </3
+    public String name;
+    public int noOfPerformances;
+    public double earnings;
+    public Song favSong;
     
-    public static void performForAudience(int noOfPeople){
-        noOfPerformances += 1;
-        earnings += noOfPeople*100;
+    Singer(String newName, int noOP, double e, Song s){
+        name = newName;
+        noOfPerformances = noOP;
+        earnings = e;
+        favSong = s;
     }
     
-    public static void changeFavSong(String Song){
-        //wait i feel like i be sure of the instructions before trying anything
+    public void performForAudience(int noOfPeople){
+        noOfPerformances += 1;
+        earnings += noOfPeople*100;
+        System.out.println(name + " performed " + noOfPerformances + " time(s) and earned a total of " + earnings + " dollars.");
+    }
+    
+    public void changeFavSong(Song s){
+        favSong = s;
+        System.out.println("Favorite song has been changed to " + s.title + " by " + s.artist + ".");
     }
 }
