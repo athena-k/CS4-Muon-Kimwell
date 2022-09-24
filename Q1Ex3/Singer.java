@@ -12,13 +12,13 @@ public class Singer {
     public String name;
     public int noOfPerformances;
     public double earnings;
-    public Song favSong;
+    public Song favoriteSong;
     
     Singer(String newName, int noOP, double e, Song s){
         name = newName;
         noOfPerformances = noOP;
         earnings = e;
-        favSong = s;
+        favoriteSong = s;
     }
     
     public void performForAudience(int noOfPeople){
@@ -28,7 +28,7 @@ public class Singer {
     }
     
     public void changeFavSong(Song s){
-        favSong = s;
-        System.out.println("Favorite song has been changed to " + s.title + " by " + s.artist + ".");
+        favoriteSong = s;
+        System.out.println("Favorite song has been changed to " + favoriteSong.title + " by " + favoriteSong.artist + ".");
     }
 }

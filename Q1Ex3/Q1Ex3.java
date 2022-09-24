@@ -26,7 +26,7 @@ public class Q1Ex3 {
         
         Singer f = new Singer("Athena", 0, 0, d);
         System.out.print(f.name + " is our performer. They have done " + f.noOfPerformances + " performances. ");
-        System.out.println("They have a total of " + f.earnings + " in earnings and their favorite song is " + f.favSong.title + " by " + f.favSong.artist + ".");
+        System.out.println("They have a total of " + f.earnings + " in earnings and their favorite song is " + f.favoriteSong.title + " by " + f.favoriteSong.artist + ".");
         f.performForAudience(12);
         f.changeFavSong(e);
     }
