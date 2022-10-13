@@ -1,19 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Q1Ex5;
 
 /**
  *
- * @author MUON
+ * @author Athena Kimwell
  */
 public class StoreSim {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        // TODO code application logic here
-        // Create items
         Item i1 = new Item("Burger", "food", 50);
         Item i2 = new Item("Fries", "food", 30);
         Item i3 = new Item("Fried Chicken", "food", 70);
@@ -26,7 +26,6 @@ public class StoreSim {
         Item i8 = new Item("Jeans", "clothes", 1200);
         Item i9 = new Item("Shoes", "clothes", 2300);
 
-        // Create Stores
         Store mcdo = new Store("McDo");
         Store watsons = new Store("Watsons");
         Store mall = new Store("Supermall");
@@ -47,10 +46,13 @@ public class StoreSim {
         mall.addItem(i7);
         mall.addItem(i8);
         mall.addItem(i9);
-
+        
         mall.filterType("food");
+        System.out.println(" ");
         mall.filterCheap(500);
+        System.out.println(" ");
         mall.filterExpensive(1000);
+        System.out.println(" ");
 
         mcdo.sellItem(0);
         mcdo.sellItem(50);
@@ -59,9 +61,6 @@ public class StoreSim {
         mall.sellItem(i7);
         mall.sellItem(i3);
 
-        // Check final earnings
         Store.printStats();
-        System.out.println(i9.getCost());
-    }
-    
+    } 
 }

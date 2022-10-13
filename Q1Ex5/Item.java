@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Q1Ex5;
 
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author MUON
+ * @author Athena Kimwell
  */
 public class Item {
     private String name, type;
@@ -36,7 +35,7 @@ public class Item {
     }
     public static void printAllItems(){
         for(Item i : completeItemList){
-            System.out.printf("Name: %s%nType: %s%nCost:%.2f%n");
+            System.out.printf("Name: %s%nType: %s%nCost: %.2f%n%n", i.name, i.type, i.cost);
         }
     }
 }
