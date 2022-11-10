@@ -10,5 +10,19 @@ package Q2Ex6;
  * @author MUON
  */
 public class GrassType extends Monster{
+    public GrassType(String name, int hp, int base){
+        super(name, "grass", "water", "fire", hp, base);
+    }   
     
+    @Override
+    public void rest(){
+        hp += 0.5*maxHP;
+        if(hp > maxHP) hp = maxHP;
+        System.out.println(name + " rested. It's health is now " + hp + ".");
+    }
+    
+    @Override
+    public void special(){
+        hp += 0.20*maxHP;
+    }
 }

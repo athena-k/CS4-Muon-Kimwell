@@ -10,5 +10,15 @@ package Q2Ex6;
  * @author MUON
  */
 public class WaterType extends Monster{
+    public WaterType(String name, int hp, int base){
+        super(name, "water", "fire", "grass", hp, base);
+        atk *= 0.7;
+        def *= 1.3;
+    }
     
+    @Override
+    public void special(){
+        def +=2;
+        hp -= 0.10*maxHP;
+    }
 }
