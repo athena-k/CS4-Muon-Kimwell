@@ -1,13 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Q2Ex6;
 
 /**
  *
- * @author MUON
+ * @author Athena Kimwell
  */
 public class Q2Ex6 {
 
@@ -15,21 +14,32 @@ public class Q2Ex6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        /*
-        Square s = new Square();
-        Rectangle r = s;
-        Square q = (Square)r; <-- casting, forcing rectangle to be a square
-        (this does not always work)
-        */
-        FireType f = new FireType("Charlie", 400, 100);
-        GrassType g = new GrassType("Garden", 600, 75);
-        WaterType w = new WaterType("Misty", 500, 90);
+        FireType f = new FireType("Fennekin", 100, 100);
+        GrassType g = new GrassType("Chespin", 300, 75);
+        WaterType w = new WaterType("Froakie", 200, 90);
         
         do{
-            f.attack(g);
             g.attack(f);
-        }while(g.hp>0||f.hp>0);
+            f.attack(g);            
+        }while(f.hp!=0 && g.hp!=0);
+        
+        System.out.println();
+        f.resetHealth();
+        g.resetHealth();
+        
+        do{
+            w.attack(g);
+            g.attack(w);
+        }while(g.hp!=0 && w.hp!=0);
+        
+        System.out.println();
+        g.resetHealth();
+        w.resetHealth();
+        
+        do{
+            f.attack(w);
+            w.attack(f);
+        }while(w.hp!=0 && f.hp!=0);
     }
     
 }

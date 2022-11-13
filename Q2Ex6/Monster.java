@@ -1,19 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Q2Ex6;
 
 /**
  *
- * @author MUON
+ * @author Athena Kimwell
  */
 import java.util.ArrayList;
 
 public class Monster {
-    protected final String name, type, strongAgainst, weakAgainst;
-    protected int maxHP, hp, atk, def, xp, lvl;
+    protected final String name, type, strongAgainst, weakAgainst; //changed access modifier from private to protected
+    protected int maxHP, hp, atk, def, xp, lvl; //changed access modifier from private to protected
     private boolean guard, charge;
     private static ArrayList<Monster> monsterList = new ArrayList<>();
 
