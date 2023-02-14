@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Q3Ex12;
 
@@ -9,18 +8,15 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author MUON
+ * @author Athena Kimwell
  */
-public class Q3Ex12 {
+public class Q3Ex12 extends JFrame{
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        //JFrame window = new BorderLayout();
-        JFrame window = new GridLayout(2,4); //i need to dump cs immediately
+        JFrame window = new BorderLayout();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         window.setVisible(true);
