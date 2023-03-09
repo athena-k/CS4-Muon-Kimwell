@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Q3Ex13.FXMLDocumentController">
+   <bottom>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="4.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#prevSearch" text="Previous" />
+            <Button mnemonicParsing="false" onAction="#nextSearch" text="Next" />
+            <Button mnemonicParsing="false" onAction="#attemptSearch" text="Search" />
+            <VBox prefHeight="10.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" textFill="RED" />
+                  <TextField fx:id="searchbox" onKeyPressed="#enterSearch" prefHeight="25.0" promptText="Search..." />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" />
+               </padding>
+            </VBox>
+         </children>
+      </FlowPane>
+   </bottom>
+   <top>
+      <Label fx:id="name" text="Math" textFill="RED" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="SansSerif Bold" size="30.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <Label fx:id="unit" text="Units: 4" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Label fx:id="grade" text="Grade: 1.75" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <ImageView fx:id="icon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@math.png" />
+         </image>
+      </ImageView>
+   </center>
+   <padding>
+      <Insets left="10.0" right="10.0" />
+   </padding>
+</BorderPane>
